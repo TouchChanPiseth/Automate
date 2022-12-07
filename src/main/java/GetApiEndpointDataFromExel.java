@@ -11,15 +11,12 @@ import java.io.IOException;
 import java.util.Iterator;
 
 public abstract class GetApiEndpointDataFromExel {
-
     private static final String FILE_PATH = System.getProperty("user.dir") + "/" + System.getenv("api_document_path");
-    private static String value = "";
+    private static  String value = "";
     static int column;
-
     public GetApiEndpointDataFromExel(){
 
     }
-
     public static String getDataFromExcel(int row, int column) {
         try {
             FileInputStream e = new FileInputStream(new File(FILE_PATH));
@@ -34,7 +31,6 @@ public abstract class GetApiEndpointDataFromExel {
 
         return value;
     }
-
     public static String getAPIEndpoint(String apiEndpointName) throws IOException {
         int row = findRowNumber(apiEndpointName);
         int column = findColumnNumber(apiEndpointName) + 1;
@@ -45,14 +41,11 @@ public abstract class GetApiEndpointDataFromExel {
         int column = findColumnNumber(apiEndpointName) + 2;
         return getDataFromExcel(row, column);
     }
-
     public static String getRequestTemplate(String apiEndpointName) throws IOException {
         int row = findRowNumber(apiEndpointName);
         int column = findColumnNumber(apiEndpointName) + 3;
         return getDataFromExcel(row, column);
     }
-
-
     public static int findColumnNumber(String cellContent) throws IOException {
         FileInputStream inputStream = new FileInputStream(FILE_PATH);
         XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
@@ -81,7 +74,6 @@ public abstract class GetApiEndpointDataFromExel {
             return column;
         }
     }
-
     public static int findRowNumber(String cellContent) throws IOException {
         FileInputStream excelFile = new FileInputStream(new File(FILE_PATH));
         XSSFWorkbook workbook = new XSSFWorkbook(excelFile);

@@ -1,0 +1,12 @@
+{
+  "settings": {
+    "defaultLang": "en",
+    "notificationEnabled": true
+  },
+  "defaultLang": {
+    "defaultLang": "ci"
+  },
+  "notificationFlag": {
+    "notificationEnabled": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "tutorials": [
+    {
+      "title": {
+        "en": "English",
+        "km": "ភាសាអង់គ្លេស",
+        "zh": "英语"
+      },
+      "content": {
+        "en": "Log In or Register",
+        "km": "ចូលប្រើ ឬ ចុះឈ្មោះ",
+        "zh": "登录或注册"
+      },
+      "sequence": 0
+    },
+    {
+      "title": {
+        "en": "Next",
+        "km": "បន្ទាប់",
+        "zh": "下一个"
+      },
+      "content": {
+        "en": "Push Notifications",
+        "km": "ការជូនដំណឹង",
+        "zh": "推送通知"
+      },
+      "sequence": 1
+    }
+  ]
+}
